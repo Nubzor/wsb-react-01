@@ -28,13 +28,15 @@ const people = [
     },
 ]
 
+const peopleRenderCallback = (person) => {
+    return <li>{person.name}</li>
+}
+
 class Main extends React.Component {
     render() {
         return <main>
             <ol>
-                { people.map(function(person) {
-                    return <li>{person.name}</li>
-                }) }
+                { people.map(peopleRenderCallback) }
             </ol>
         </main>
     }
