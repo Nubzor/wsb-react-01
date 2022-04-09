@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './main.css';
+
 const people = [
     {
         name: 'Ala',
@@ -40,9 +42,7 @@ class Main extends React.Component {
             </ol>
             <ul>
                 { people.map(function(person) {
-                    return <li style={{
-                        backgroundColor: person.age > 30 ? 'green' : 'white'
-                    }}>
+                    return <li className={person.age > 30 ? 'background' : ''}>
                         {person.name} {person.surname}
                     </li>
                 })}
