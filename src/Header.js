@@ -4,12 +4,6 @@ import Href from './Href';
 import Logo from './Logo';
 import Paragraph from './Paragraph';
 
-// function Header() {
-//     return <div>
-//             Alamakota
-//         </div>
-// }
-
 class Header extends React.Component {
     render() {
         return <header className="App-header">
