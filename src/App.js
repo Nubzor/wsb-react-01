@@ -1,5 +1,6 @@
 import './App.css';
 
+import Href from './Href';
 import Logo from './Logo';
 import Paragraph from './Paragraph';
 
@@ -19,14 +20,8 @@ function App() {
         <Paragraph
           text="Olamakota" />
 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Href linkText="Learn React <3" />
+        <Href linkText="Ucz sie Reacta! <3" />
       </header>
     </div>
   );
