@@ -1,8 +1,11 @@
 import React from 'react';
 
-function Paragraph() {
+// props is always an object !!!
+// props.text
+
+function Paragraph(props) {
     return <p>
-        Edit <code>src/App.js</code> and save to reload.
+        { props.text }
     </p>
 }
 

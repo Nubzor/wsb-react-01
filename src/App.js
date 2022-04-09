@@ -8,7 +8,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Logo />
-        <Paragraph />
+        <Paragraph
+          text="Ćwiczymy sobie Reacta na zajeciąch w WSB" />
+        <Paragraph
+          text="Alamakota" />
+        <Paragraph
+          text="Olamakota" />
         <a
           className="App-link"
           href="https://reactjs.org"
