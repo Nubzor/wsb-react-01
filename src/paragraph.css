@@ -1,0 +1,15 @@
+.paragraph {
+    padding: 20px;
+    background-color: #ccc;
+    margin: 20px;
+}
+
+.paragraph h1 {
+    color: #000;
+    /* color: black; */
+}
+
+.paragraph h4 {
+    color: #f00;
+    /* color: red */
+}
