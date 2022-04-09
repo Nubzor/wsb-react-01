@@ -5,7 +5,8 @@ import React from 'react';
 
 function Paragraph(props) {
     return <p>
-        { props.text }
+        <h1>{ props.text }</h1>
+        { props.subTitle ? <h4>{ props.subTitle }</h4> : null }
     </p>
 }
 
