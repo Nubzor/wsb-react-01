@@ -38,6 +38,15 @@ class Main extends React.Component {
             <ol>
                 { people.map(peopleRenderCallback) }
             </ol>
+            <ul>
+                { people.map(function(person) {
+                    return <li style={{
+                        backgroundColor: person.age > 30 ? 'green' : 'white'
+                    }}>
+                        {person.name} {person.surname}
+                    </li>
+                })}
+            </ul>
         </main>
     }
 }
