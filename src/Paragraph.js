@@ -5,13 +5,38 @@ import './paragraph.css';
 // props is always an object !!!
 // props.text
 
-const onMouseMoveHandler = event => console.log(event);
+class Paragraph extends React.Component {
+    constructor() {
+        super();
 
-function Paragraph(props) {
-    return <p className="paragraph" onMouseMove={onMouseMoveHandler}>
-        <h1>{ props.text }</h1>
-        { props.subTitle ? <h4>{ props.subTitle }</h4> : null }
-    </p>
+        this.state = {
+            isMouseOver: false,
+        }
+    }
+
+    onMouseOverHandler = event => {
+        this.setState({
+            isMouseOver: true,
+        })
+    }
+
+    onMouseOutHandler = event => {
+        this.setState({
+            isMouseOver: false,
+        })
+    }
+
+    render() {
+        const paragraphClassName = this.state.isMouseOver ? 'paragraph-important' : 'paragraph';
+
+        return <p className={paragraphClassName}
+                    onMouseOver={this.onMouseOverHandler}
+                    onMouseOut={this.onMouseOutHandler}
+                    >
+            <h1>{ this.props.text }</h1>
+            { this.props.subTitle ? <h4>{ this.props.subTitle }</h4> : null }
+        </p>
+    }
 }
 
 export default Paragraph;

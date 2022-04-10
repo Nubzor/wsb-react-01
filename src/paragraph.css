@@ -4,6 +4,12 @@
     margin: 20px;
 }
 
+.paragraph-important {
+    padding: 20px;
+    background-color: #f00;
+    margin: 20px;
+}
+
 .paragraph h1 {
     color: #000;
     /* color: black; */
