@@ -6,25 +6,18 @@ class Cwiczenia extends React.Component {
 
         // stan poczatkowy
         this.state = {
-            licznik: 0,
-            tablicaImion: ['Ala', 'Ola'],
+            tablicaImion: [],
             input: '',
         }
     }
 
-    onClickPlusHandler = event => {
-         this.setState({
-            licznik: this.state.licznik + 1,
-         });
-    }
-
-    onClickMinusHandler = event => {
-        this.setState({
-            licznik: this.state.licznik - 1,
-         });
-    }
-
     onClickAdressBookHandler = event => {
+        if (this.state.input.length === 0) {
+            return;
+        } else if (this.state.input.length > 10) {
+            return;
+        }
+
         this.setState({
             tablicaImion: this.state.tablicaImion.concat(this.state.input),
         });
@@ -38,11 +31,6 @@ class Cwiczenia extends React.Component {
 
     render() {
         return <div>
-            <div>
-                <span>Licznik: {this.state.licznik}</span>
-                <button onClick={this.onClickPlusHandler}>Click +</button>
-                <button onClick={this.onClickMinusHandler}>Click -</button>
-            </div>
             <div>
                 <p>Ksiazka adresowa</p>
                 <ul>
