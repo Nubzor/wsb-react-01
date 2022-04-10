@@ -34,18 +34,22 @@ const peopleRenderCallback = (person) => {
     return <li>{person.name}</li>
 }
 
+const peopleListRenderCallback = (person) => {
+    return <li className={person.age > 30 ? 'background' : ''}>
+        {person.name} {person.surname}
+    </li>
+}
+
 class Main extends React.Component {
+    onClickHandler = event => alert(12345);
+
     render() {
-        return <main>
+        return <main onClick={this.onClickHandler}>
             <ol>
                 { people.map(peopleRenderCallback) }
             </ol>
             <ul>
-                { people.map(function(person) {
-                    return <li className={person.age > 30 ? 'background' : ''}>
-                        {person.name} {person.surname}
-                    </li>
-                })}
+                { people.map(peopleListRenderCallback)}
             </ul>
         </main>
     }
