@@ -31,11 +31,11 @@ const people = [
 ]
 
 const peopleRenderCallback = (person) => {
-    return <li>{person.name}</li>
+    return <li key={person.name + person.surname}>{person.name}</li>
 }
 
 const peopleListRenderCallback = (person) => {
-    return <li className={person.age > 30 ? 'background' : ''}>
+    return <li key={person.name + person.surname} className={person.age > 30 ? 'background' : ''}>
         {person.name} {person.surname}
     </li>
 }

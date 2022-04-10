@@ -29,13 +29,13 @@ class Paragraph extends React.Component {
     render() {
         const paragraphClassName = this.state.isMouseOver ? 'paragraph-important' : 'paragraph';
 
-        return <p className={paragraphClassName}
+        return <div className={paragraphClassName}
                     onMouseOver={this.onMouseOverHandler}
                     onMouseOut={this.onMouseOutHandler}
                     >
             <h1>{ this.props.text }</h1>
             { this.props.subTitle ? <h4>{ this.props.subTitle }</h4> : null }
-        </p>
+        </div>
     }
 }
 
